@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Compra</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Registro de Requerimientos de Compra</h1>
+    </header>
+    <form id="compraForm">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" maxlength="20" required />
+
+      <label for="presupuesto">Presupuesto máximo (en pesos):</label>
+      <input type="number" id="presupuesto" required />
+
+      <label for="cantidad">Cantidad de productos máxima:</label>
+      <input type="number" id="cantidad" min="1" max="20" required />
+
+      <label for="direccion">Dirección de entrega:</label>
+      <input type="text" id="direccion" required />
+
+      <label>Tipo de entrega:</label>
+      <div class="tipo-entrega">
+        <input
+          type="radio"
+          id="domicilio"
+          name="entrega"
+          value="domicilio"
+          required
+        />
+        <label for="domicilio">Domicilio</label>
+        <input
+          type="radio"
+          id="tienda"
+          name="entrega"
+          value="tienda"
+          required
+        />
+        <label for="tienda">Recoger en tienda</label>
+      </div>
+
+      <div class="buttons">
+        <button type="submit">Iniciar compra</button>
+        <button type="reset">Limpiar campos</button>
+      </div>
+    </form>
+    <script src="main.js"></script>
+  </body>
+</html>

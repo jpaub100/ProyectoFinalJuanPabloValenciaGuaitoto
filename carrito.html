@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Revisa tu compra</h1>
+      <button
+        onclick="window.location.href='productos.html'"
+        class="seguir-comprando"
+      >
+        Seguir comprando
+      </button>
+    </header>
+
+    <main class="carrito-contenido">
+      <!-- Sección de Compra Actual -->
+      <section id="carritoLista" class="carrito-lista">
+        <table>
+          <thead>
+            <tr>
+              <th>Artículo</th>
+              <th>Descripción</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Subtotal</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="carritoItems">
+            <!-- Los productos se cargarán aquí desde el JavaScript -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Sección de Resumen de Compra -->
+      <aside class="resumen-compra">
+        <h2>Tu compra</h2>
+        <p id="totalProductos">Total de productos: 0</p>
+        <p id="costoDomicilio">Cargo por domicilio: $0</p>
+        <p id="totalCompra">Total de la compra: $0</p>
+
+        <!-- Sección de Tarjeta de Crédito dentro del Resumen -->
+        <div class="tarjeta-credito">
+          <h3>Información de Tarjeta de Crédito</h3>
+          <form id="tarjetaForm">
+            <label for="nombreTarjeta">Nombre en la tarjeta:</label>
+            <input type="text" id="nombreTarjeta" required />
+
+            <label for="numeroTarjeta">Número de tarjeta:</label>
+            <input type="text" id="numeroTarjeta" maxlength="16" required />
+
+            <label for="fechaExpiracion">Fecha de expiración (MM/AA):</label>
+            <input
+              type="text"
+              id="fechaExpiracion"
+              placeholder="MM/AA"
+              maxlength="5"
+              required
+            />
+
+            <label for="codigoSeguridad">Código de seguridad:</label>
+            <input type="text" id="codigoSeguridad" maxlength="3" required />
+          </form>
+        </div>
+
+        <button id="ejecutarCompra" class="finalizar-compra">
+          Ejecutar Compra
+        </button>
+      </aside>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
