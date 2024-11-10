@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const limite = 15;
   const cargoDomicilio = 15000;
 
-  // *** Validaciones de campos ***
   const numeroTarjetaInput = document.getElementById("numeroTarjeta");
   const codigoSeguridadInput = document.getElementById("codigoSeguridad");
   const nombreTarjetaInput = document.getElementById("nombreTarjeta");
@@ -11,43 +10,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (numeroTarjetaInput) {
     numeroTarjetaInput.addEventListener("input", function () {
-      this.value = this.value.replace(/[^0-9]/g, ""); // Permitir solo números
+      this.value = this.value.replace(/[^0-9]/g, "");
       if (this.value.length > 16) {
-        this.value = this.value.slice(0, 16); // Limitar a 16 caracteres
+        this.value = this.value.slice(0, 16);
       }
     });
   }
 
   if (codigoSeguridadInput) {
     codigoSeguridadInput.addEventListener("input", function () {
-      this.value = this.value.replace(/[^0-9]/g, ""); // Permitir solo números
+      this.value = this.value.replace(/[^0-9]/g, "");
     });
   }
 
   if (nombreTarjetaInput) {
     nombreTarjetaInput.addEventListener("input", function () {
-      this.value = this.value.replace(/[^a-zA-Z\s]/g, ""); // Permitir solo letras y espacios
+      this.value = this.value.replace(/[^a-zA-Z\s]/g, "");
       if (this.value.length > 24) {
-        this.value = this.value.slice(0, 24); // Limitar a 24 caracteres
+        this.value = this.value.slice(0, 24);
       }
     });
   }
 
   if (fechaExpiracionInput) {
     fechaExpiracionInput.addEventListener("input", function () {
-      this.value = this.value.replace(/[^0-9/]/g, ""); // Permitir solo números y '/'
+      this.value = this.value.replace(/[^0-9/]/g, "");
 
       if (this.value.length === 2 && !this.value.includes("/")) {
-        this.value = this.value + "/"; // Agregar '/' automáticamente después de los primeros dos caracteres
+        this.value = this.value + "/";
       }
 
       if (this.value.length > 5) {
-        this.value = this.value.slice(0, 5); // Limitar a 5 caracteres (MM/YY)
+        this.value = this.value.slice(0, 5);
       }
     });
   }
 
-  // *** Funcionalidad para index.html (Registro de Compra) ***
   const compraForm = document.getElementById("compraForm");
   if (compraForm) {
     compraForm.addEventListener("submit", function (e) {
@@ -79,12 +77,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Función para limpiar el formulario
   window.resetForm = function () {
     document.getElementById("compraForm").reset();
   };
 
-  // *** Funcionalidad para productos.html ***
   const productosLista = document.getElementById("productosLista");
   if (productosLista) {
     function cargarProductos() {
@@ -156,7 +152,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Función para mostrar detalles de un producto
     window.verDetalle = function (id) {
       const producto = productos.find((p) => p.id === id);
       const detalleContenido = document.getElementById("detalleContenido");
@@ -171,7 +166,6 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("detalleProducto").dataset.productId = id;
     };
 
-    // Agregar al carrito desde Ver Detalle
     document
       .getElementById("agregarAlCarritoDetalle")
       .addEventListener("click", function () {
@@ -219,7 +213,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  // *** Funcionalidad para carrito.html ***
   const cargarCarrito = () => {
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     const carritoItems = document.getElementById("carritoItems");
