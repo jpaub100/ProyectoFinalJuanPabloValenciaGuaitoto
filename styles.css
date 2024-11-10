@@ -4,32 +4,32 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+  background-image: url("https://www.hola.com/imagenes/estar-bien/20190412140510/razas-de-perro-para-convivir-con-gato/0-668-422/perros-gatos-t.jpg");
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo-titulo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  margin-right: 15px;
 }
 
 header h1 {
   color: #4caf50;
-  text-align: left;
-  padding: 20px;
   margin: 0;
   font-size: 24px;
-  border-bottom: 1px solid #ddd;
-}
-
-/* Botón "Seguir comprando" en carrito.html */
-.seguir-comprando {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-}
-
-.seguir-comprando:hover {
-  background-color: #45a049;
 }
 
 /* Estilos para index.html (Registro de Compra) */
@@ -49,17 +49,12 @@ form label {
 }
 
 form input[type="text"],
-form input[type="number"] {
+form input[type="number"],
+form select {
   width: 100%;
   padding: 8px;
   margin: 5px 0;
   box-sizing: border-box;
-}
-
-.tipo-entrega {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 10px;
 }
 
 .buttons {
@@ -80,7 +75,7 @@ button:hover {
   background-color: #45a049;
 }
 
-/* Estilos para productos.html */
+/* Estilos universales para productos.html y carrito.html */
 .contenedor {
   display: flex;
   gap: 20px;
@@ -109,11 +104,12 @@ button:hover {
   padding: 8px;
 }
 
+/* Lista de productos */
 .productos-lista {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  flex: 1;
+  flex: 2;
 }
 
 .producto {
@@ -124,120 +120,162 @@ button:hover {
   background-color: #fff;
 }
 
-/* Botón fijo para ir al carrito */
-.ir-al-carrito {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
+/* Sección de ver detalle */
+.detalle-producto {
+  width: 300px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
 }
 
-.ir-al-carrito:hover {
+.detalle-producto h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#detalleContenido img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.detalle-producto label,
+#cantidadProducto,
+#agregarAlCarritoDetalle {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#cantidadProducto {
+  padding: 8px;
+}
+
+#agregarAlCarritoDetalle {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#agregarAlCarritoDetalle:hover {
   background-color: #45a049;
 }
 
 /* Estilos para carrito.html */
-.carrito-contenido {
+.contenedor-carrito {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  gap: 20px;
+  width: 80%;
+  margin-top: 20px;
 }
 
-/* Tabla de productos en el carrito */
-.carrito-lista {
-  flex: 3;
+/* Table styling for cart items */
+.carrito-seccion {
+  flex: 2;
 }
 
-.carrito-lista table {
+table {
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: 20px;
 }
 
-.carrito-lista th,
-.carrito-lista td {
-  border: 1px solid #ddd;
+th,
+td {
   padding: 10px;
   text-align: center;
+  border-bottom: 1px solid #ddd;
 }
 
-.carrito-lista th {
-  background-color: #f5f5f5;
+th {
+  background-color: #f8f8f8;
   font-weight: bold;
 }
 
-.carrito-lista img {
-  width: 80px;
+.boton-eliminar {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #e74c3c;
+  font-size: 18px;
 }
 
-.carrito-lista input[type="number"] {
-  width: 50px;
-  text-align: center;
-}
-
-/* Resumen de compra */
+/* Styling for aside (right side) in carrito.html */
 .resumen-compra {
   flex: 1;
   border: 1px solid #ddd;
   padding: 20px;
-  text-align: left;
+  margin-left: 20px;
   background-color: #f9f9f9;
+  border-radius: 8px;
 }
 
-.resumen-compra h2 {
-  font-size: 20px;
-  margin-bottom: 15px;
+.resumen-compra h2,
+.resumen-compra h3 {
+  margin-top: 0;
 }
 
-.resumen-compra p {
+#subtotalCompra,
+#totalCompraConDomicilio {
   font-size: 16px;
-  margin: 8px 0;
+  margin: 10px 0;
 }
 
-.finalizar-compra {
+form label {
   display: block;
+  margin: 10px 0 5px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form select {
   width: 100%;
-  padding: 10px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 20px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
-.finalizar-compra:hover {
-  background-color: #45a049;
-}
-
-/* Información de tarjeta de crédito dentro del resumen */
-.tarjeta-credito {
-  margin-top: 20px;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-}
-
-.tarjeta-credito h3 {
-  text-align: left;
-  font-size: 18px;
+.tipo-tarjeta {
   margin-bottom: 10px;
 }
 
-.tarjeta-credito label {
-  display: block;
-  margin-top: 10px;
-  font-size: 14px;
+.tipo-tarjeta label {
+  margin-right: 10px;
 }
 
-.tarjeta-credito input {
-  padding: 8px;
-  margin-top: 5px;
-  font-size: 16px;
+#ejecutarCompra,
+#cancelarCompra {
   width: 100%;
-  box-sizing: border-box;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+#cancelarCompra {
+  background-color: #e74c3c;
+}
+
+#cancelarCompra:hover {
+  background-color: #c0392b;
+}
+
+/* Input group for codigo de seguridad */
+.input-group {
+  position: relative;
+}
+
+.input-group .toggle-visibility {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
 }

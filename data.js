@@ -9,6 +9,7 @@ const productos = [
     tipo: "perro",
     imagen:
       "https://dojiw2m9tvv09.cloudfront.net/2905/product/dog-chow-adulto-mediano-grande-carne-pollo5628.jpg?1097",
+    marca: "Dog Chow",
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const productos = [
     tipo: "gato",
     imagen:
       "https://songatos.com/wp-content/uploads/2023/01/rascadores-de-gatos-1-songatos.com_.jpg",
+    marca: "Songatos",
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ const productos = [
     tipo: "perro",
     imagen:
       "https://cdnebasnet.com/data/cache/opt_jpg/eshop/sumascota/images/products/i/1/8/2/7/p1827/0000-5060086561579-1059594910-1400x1400.jpg",
+    marca: "Sumascota",
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ const productos = [
     tipo: "gato",
     imagen:
       "https://plazavea.vteximg.com.br/arquivos/ids/305523-1000-1000/20192844.jpg?v=637194668119730000",
+    marca: "Ricocat",
   },
   {
     id: 5,
@@ -53,6 +57,7 @@ const productos = [
     tipo: "perro",
     imagen:
       "https://i.pinimg.com/originals/93/a0/31/93a031be4ebbce85c6b3ec8fb9ffd480.jpg",
+    marca: "Pet Cozy",
   },
   {
     id: 6,
@@ -64,6 +69,7 @@ const productos = [
     tipo: "perro",
     imagen:
       "https://images-na.ssl-images-amazon.com/images/I/71IdSpUXaZL._AC_SL1500_.jpg",
+    marca: "Paw Care",
   },
   {
     id: 7,
@@ -75,6 +81,7 @@ const productos = [
     tipo: "gato",
     imagen:
       "https://th.bing.com/th/id/R.55f00c781eb1f310ebf81798ca9c1958?rik=mFP2s1L5gcPPKg&pid=ImgRaw&r=0",
+    marca: "Whiskas",
   },
   {
     id: 8,
@@ -86,6 +93,7 @@ const productos = [
     tipo: "perro",
     imagen:
       "https://4.bp.blogspot.com/-mSqhWBZAK3I/UVNlWPgQaDI/AAAAAAAAAOE/ZKvdC8ba8bE/s1600/tirador.jpg",
+    marca: "Pet Control",
   },
   {
     id: 9,
@@ -97,6 +105,7 @@ const productos = [
     tipo: "gato",
     imagen:
       "https://a0.soysuper.com/1636d5e7d57ea2cedb42bb680311134a.1024.0.0.0.wmark.be4f8d2e.jpg",
+    marca: "Whiskas",
   },
   {
     id: 10,
@@ -107,6 +116,7 @@ const productos = [
     categoria: "juguetes",
     tipo: "perro",
     imagen: "https://cat-oh.com/wp-content/uploads/2020/05/KXL_1.jpg",
+    marca: "KONG",
   },
   {
     id: 11,
@@ -118,6 +128,7 @@ const productos = [
     tipo: "gato",
     imagen:
       "https://dojiw2m9tvv09.cloudfront.net/10212/product/L_rascador-cubre-piso-y-arco-masajeador-para-gatos-d_nq_np_985905-mlc25108918622_102016-f9541.jpg?55",
+    marca: "Self Groom",
   },
   {
     id: 12,
@@ -129,6 +140,7 @@ const productos = [
     tipo: "perro",
     imagen:
       "https://promart.vteximg.com.br/arquivos/ids/8248564-444-444/imageUrl_1.jpg?v=638651399280770000",
+    marca: "Equilíbrio",
   },
   {
     id: 13,
@@ -140,6 +152,7 @@ const productos = [
     tipo: "gato",
     imagen:
       "https://cdn.shopify.com/s/files/1/0185/9786/products/pty00-14244_e1_1_1400x.jpg?v=1544160375",
+    marca: "PurrPlay",
   },
   {
     id: 14,
@@ -150,6 +163,7 @@ const productos = [
     categoria: "comida",
     tipo: "perro",
     imagen: "https://www.lagranbodega.com.pe/public/images/products/160000.jpg",
+    marca: "Purina",
   },
   {
     id: 15,
@@ -160,6 +174,7 @@ const productos = [
     categoria: "accesorios",
     tipo: "gato",
     imagen: "https://m.media-amazon.com/images/I/716KI03lspS._AC_SL1500_.jpg",
+    marca: "Pet Carrier",
   },
   {
     id: 16,
@@ -171,6 +186,7 @@ const productos = [
     tipo: "perro",
     imagen:
       "https://images-na.ssl-images-amazon.com/images/I/71bS%2B-4aksL._AC_SL1500_.jpg",
+    marca: "Playful Paws",
   },
   {
     id: 17,
@@ -182,6 +198,7 @@ const productos = [
     tipo: "gato",
     imagen:
       "https://www.guiasdecompra.com/wp-content/uploads/2019/11/comida-para-gatos.jpg",
+    marca: "Purina",
   },
   {
     id: 18,
@@ -193,6 +210,7 @@ const productos = [
     tipo: "perro",
     imagen:
       "https://http2.mlstatic.com/D_NQ_NP_978858-MCO42145792829_062020-O.webp",
+    marca: "Pawsome Style",
   },
   {
     id: 19,
@@ -204,6 +222,7 @@ const productos = [
     tipo: "gato",
     imagen:
       "https://oechsle.vteximg.com.br/arquivos/ids/1332679-1000-1000/image-cfa0bb00c10741329b876bed95515b22.jpg?v=637494330400600000",
+    marca: "Ricocat",
   },
   {
     id: 20,
@@ -215,6 +234,7 @@ const productos = [
     tipo: "perro",
     imagen:
       "https://www.pawsify.com/wp-content/uploads/2020/03/81xE5osOAgL.ACSL1500.jpg",
+    marca: "ChewFun",
   },
   {
     id: 21,
@@ -226,6 +246,7 @@ const productos = [
     tipo: "perro",
     imagen:
       "https://www.pedigree.com.ar/cdn-cgi/image/format=auto,q=90/sites/g/files/fnmzdf1506/files/2022-10/landing-hero-adult-default.png",
+    marca: "Pedigree",
   },
   {
     id: 22,
@@ -237,6 +258,7 @@ const productos = [
     tipo: "gato",
     imagen:
       "https://images-na.ssl-images-amazon.com/images/I/71Ep8xZzAXL._AC_SL1500_.jpg",
+    marca: "Cat Spin",
   },
   {
     id: 23,
@@ -248,6 +270,7 @@ const productos = [
     tipo: "perro",
     imagen:
       "https://i.pinimg.com/originals/40/89/43/408943a9a18e9b97d423ce92c81c12bd.jpg",
+    marca: "PawPrint",
   },
   {
     id: 24,
@@ -259,6 +282,7 @@ const productos = [
     tipo: "gato",
     imagen:
       "https://vetmasagro.com/wp-content/uploads/2022/08/cat-chow-este-jpg.webp",
+    marca: "Purina",
   },
   {
     id: 25,
@@ -270,6 +294,7 @@ const productos = [
     tipo: "perro",
     imagen:
       "https://aperrados.com/wp-content/uploads/2018/11/piscinas-para-perros.png",
+    marca: "AquaPaws",
   },
   {
     id: 26,
@@ -281,6 +306,7 @@ const productos = [
     tipo: "perro",
     imagen:
       "https://aperrados.com/wp-content/uploads/2018/08/juguetes-para-perros-razas-medianas-y-grandes.jpg",
+    marca: "ChewSqueak",
   },
   {
     id: 27,
@@ -292,6 +318,7 @@ const productos = [
     tipo: "gato",
     imagen:
       "https://static.condisline.com/resize_1280x1347/images/catalog/large/109264.jpg",
+    marca: "Ultima",
   },
   {
     id: 28,
@@ -303,6 +330,7 @@ const productos = [
     tipo: "perro",
     imagen:
       "https://1.bp.blogspot.com/-KIwHBnpP1vg/XX-qnkcNRTI/AAAAAAAASDk/3AeV8wNM0r8gO_P1OE_3sdQ7Owxv0lRlgCLcBGAsYHQ/s1600/Accesorios%2Bdivertidos%2Bque%2Btu%2Bperro%2Brealmente%2Bno%2Bnecesita%2B5.jpg",
+    marca: "Adventure Pack",
   },
   {
     id: 29,
@@ -314,6 +342,7 @@ const productos = [
     tipo: "gato",
     imagen:
       "https://d34xtejqjqcp3x.cloudfront.net/store/5da18cb5df0e19905695b33c9f983cea.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAICTJHRPRHFBTAWCA%2F20210222%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210222T020502Z&X-Amz-Expires=900&X-Amz-SignedHeaders=host&X-Amz-Signature=e26c7b2e83c19837aacf4529665d9a1a650af41bb3573d2cb2090fb841a92cba",
+    marca: "Purina Felix",
   },
   {
     id: 30,
@@ -325,6 +354,7 @@ const productos = [
     tipo: "perro",
     imagen:
       "https://th.bing.com/th/id/OIP.OAndO12g5Bk0PSsINh7ybAHaHa?rs=1&pid=ImgDetMain",
+    marca: "RewardBall",
   },
   {
     id: 31,
@@ -336,6 +366,7 @@ const productos = [
     tipo: "gato",
     imagen:
       "https://i.etsystatic.com/24436693/r/il/1e2535/2580619603/il_fullxfull.2580619603_py3y.jpg",
+    marca: "Feline Cozy",
   },
   {
     id: 32,
@@ -347,6 +378,7 @@ const productos = [
     tipo: "perro",
     imagen:
       "https://aratiendas.com/wp-content/uploads/2023/01/14401-7704269225091.jpg",
+    marca: "Perroski",
   },
   {
     id: 33,
@@ -358,6 +390,7 @@ const productos = [
     tipo: "gato",
     imagen:
       "https://http2.mlstatic.com/D_NQ_NP_2X_744102-MLA43483062151_092020-F.jpg",
+    marca: "Kitty Fun",
   },
   {
     id: 34,
@@ -369,6 +402,7 @@ const productos = [
     tipo: "perro",
     imagen:
       "https://mlstaticquic-a.akamaihd.net/comida-de-perro-dogui-recetas-caseras-24-kg-envio-regalo-D_NQ_NP_749443-MLU31430144446_072019-F.jpg",
+    marca: "Dogui",
   },
   {
     id: 35,
@@ -380,6 +414,7 @@ const productos = [
     tipo: "gato",
     imagen:
       "https://mininos.es/wp-content/uploads/2020/09/Copia-de-gatos-unicolores.jpg",
+    marca: "KittyCave",
   },
   {
     id: 36,
@@ -391,6 +426,7 @@ const productos = [
     tipo: "perro",
     imagen:
       "https://th.bing.com/th/id/OIP.IDBVeevJoSMu-p345QXsqAAAAA?rs=1&pid=ImgDetMain",
+    marca: "Chewy Bone",
   },
   {
     id: 37,
@@ -402,6 +438,7 @@ const productos = [
     tipo: "gato",
     imagen:
       "https://resources.claroshop.com/medios-plazavip/mkt/5e179274dec8c_000163883mjpg.jpg",
+    marca: "Whiskas",
   },
   {
     id: 38,
@@ -413,6 +450,7 @@ const productos = [
     tipo: "perro",
     imagen:
       "https://st.depositphotos.com/1177973/2637/i/950/depositphotos_26379649-stock-photo-pet-accessories-isolated-on-white.jpg",
+    marca: "Pet Essentials",
   },
   {
     id: 39,
@@ -424,6 +462,7 @@ const productos = [
     tipo: "gato",
     imagen:
       "https://www.supermercadosantamaria.com/documents/10180/10504/171153028_G.jpg",
+    marca: "Chiki",
   },
   {
     id: 40,
@@ -435,5 +474,6 @@ const productos = [
     tipo: "perro",
     imagen:
       "https://www.lidl.es/media/product/0/0/0/2/8/4/1/juguetes-para-perros-zoom--7.jpg",
+    marca: "Nerf",
   },
 ];

@@ -8,13 +8,21 @@
   </head>
   <body>
     <header>
-      <h1>Productos Disponibles</h1>
+      <div class="logo-titulo-container">
+        <img src="Logo 1.png" alt="Logo" class="logo" />
+      <h1>Catálogo de Productos</h1>
+      <button class="btn-volver" onclick="window.location.href='index.html'">
+        Cancelar compra
+      </button>
+      <button class="btn-carrito" onclick="window.location.href='carrito.html'">
+        Completar compra
+      </button>
     </header>
 
     <main class="contenedor">
-      <!-- Aside con filtros -->
+      <!-- Sección de filtros -->
       <aside class="filtros">
-        <h2>Filtrar Productos</h2>
+        <h2>Filtros</h2>
         <label for="categoria">Categoría:</label>
         <select id="categoria">
           <option value="todos">Todos</option>
@@ -30,14 +38,23 @@
           <option value="gato">Gato</option>
         </select>
 
-        <button id="filtrar">Aplicar Filtros</button>
+        <button id="filtrar">Filtrar</button>
         <button id="limpiarFiltros">Limpiar Filtros</button>
       </aside>
 
       <!-- Sección de productos -->
       <section class="productos-lista" id="productosLista">
-        <!-- Los productos se cargarán aquí con JavaScript -->
+        <!-- Productos cargados dinámicamente aquí -->
       </section>
+
+      <!-- Sección de ver detalle -->
+      <aside class="detalle-producto" id="detalleProducto">
+        <h2>Detalles del Producto</h2>
+        <div id="detalleContenido">
+          <!-- Detalles del producto seleccionados aquí -->
+        </div>
+        <button id="agregarAlCarritoDetalle">Agregar al Carrito</button>
+      </aside>
     </main>
 
     <script src="data.js"></script>

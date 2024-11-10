@@ -8,18 +8,17 @@
   </head>
   <body>
     <header>
+      <div class="logo-titulo-container">
+        <img src="Logo 1.png" alt="Logo" class="logo" />
       <h1>Revisa tu compra</h1>
-      <button
-        onclick="window.location.href='productos.html'"
-        class="seguir-comprando"
-      >
+      <button onclick="window.location.href='productos.html'">
         Seguir comprando
       </button>
     </header>
 
-    <main class="carrito-contenido">
-      <!-- Sección de Compra Actual -->
-      <section id="carritoLista" class="carrito-lista">
+    <main class="contenedor-carrito">
+      <!-- Sección principal: tabla de productos en el carrito -->
+      <section class="carrito-seccion">
         <table>
           <thead>
             <tr>
@@ -28,52 +27,102 @@
               <th>Precio</th>
               <th>Cantidad</th>
               <th>Subtotal</th>
-              <th></th>
+              <th>Eliminar</th>
             </tr>
           </thead>
           <tbody id="carritoItems">
-            <!-- Los productos se cargarán aquí desde el JavaScript -->
+            <!-- Los productos del carrito se cargarán aquí dinámicamente -->
           </tbody>
         </table>
       </section>
 
-      <!-- Sección de Resumen de Compra -->
+      <!-- Aside derecho: Resumen de la compra y formulario de tarjeta de crédito -->
       <aside class="resumen-compra">
         <h2>Tu compra</h2>
-        <p id="totalProductos">Total de productos: 0</p>
-        <p id="costoDomicilio">Cargo por domicilio: $0</p>
-        <p id="totalCompra">Total de la compra: $0</p>
+        <p id="subtotalCompra">Subtotal de productos: $0.00</p>
+        <p id="valorDomicilio">Valor del domicilio: $5000.00</p>
+        <p id="totalCompraConDomicilio">
+          Total de la compra (con domicilio): $0.00
+        </p>
 
-        <!-- Sección de Tarjeta de Crédito dentro del Resumen -->
-        <div class="tarjeta-credito">
-          <h3>Información de Tarjeta de Crédito</h3>
-          <form id="tarjetaForm">
-            <label for="nombreTarjeta">Nombre en la tarjeta:</label>
-            <input type="text" id="nombreTarjeta" required />
+        <!-- Información de tarjeta de crédito -->
+        <h3>Información de Tarjeta de Crédito</h3>
+        <form id="tarjetaForm">
+          <label for="nombreTarjeta">Nombre en la tarjeta:</label>
+          <input type="text" id="nombreTarjeta" required />
 
-            <label for="numeroTarjeta">Número de tarjeta:</label>
-            <input type="text" id="numeroTarjeta" maxlength="16" required />
+          <label for="numeroTarjeta">Número de tarjeta:</label>
+          <input type="text" id="numeroTarjeta" required />
 
-            <label for="fechaExpiracion">Fecha de expiración (MM/AA):</label>
+          <label for="fechaExpiracion">Fecha de expiración (MM/AA):</label>
+          <input
+            type="text"
+            id="fechaExpiracion"
+            placeholder="MM/AA"
+            required
+          />
+
+          <label for="codigoSeguridad">Código de seguridad:</label>
+          <div class="input-group">
             <input
-              type="text"
-              id="fechaExpiracion"
-              placeholder="MM/AA"
-              maxlength="5"
+              type="password"
+              id="codigoSeguridad"
+              maxlength="3"
               required
             />
+          </div>
 
-            <label for="codigoSeguridad">Código de seguridad:</label>
-            <input type="text" id="codigoSeguridad" maxlength="3" required />
-          </form>
-        </div>
+          <label for="paisEmision">País de emisión:</label>
+          <select id="paisEmision" required>
+            <option value="">Seleccione un país</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Argentina">Argentina</option>
+            <option value="México">México</option>
+            <option value="Chile">Chile</option>
+            <option value="Perú">Perú</option>
+            <option value="España">España</option>
+            <option value="Estados Unidos">Estados Unidos</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="Venezuela">Venezuela</option>
+          </select>
 
-        <button id="ejecutarCompra" class="finalizar-compra">
-          Ejecutar Compra
+          <label>Tipo de tarjeta:</label>
+          <div class="tipo-tarjeta">
+            <label
+              ><input
+                type="radio"
+                name="tipoTarjeta"
+                value="Mastercard"
+                required
+              />
+              Mastercard</label
+            >
+            <label
+              ><input type="radio" name="tipoTarjeta" value="Visa" required />
+              Visa</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="tipoTarjeta"
+                value="Prepago"
+                required
+              />
+              Prepago</label
+            >
+          </div>
+        </form>
+
+        <!-- Botones de acción -->
+        <button id="ejecutarCompra">Ejecutar Compra</button>
+        <button id="cancelarCompra" onclick="window.location.href='index.html'">
+          Cancelar Compra
         </button>
       </aside>
     </main>
 
+    <script src="data.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
